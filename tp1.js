@@ -26,8 +26,19 @@ function extractValues(data) {
 */
 
 function arrayToLengthCounters(array) {
-  // Tu código aquí
+   // Tu código aquí
+    
+    var objetoss={};
+    
+   for(let i=0; i<array.length; i++) {
+    var clave = array[i];
+    var valor = clave.length;
+    objetoss[clave] = valor;
+  }
+  return objetoss;
+    
 }
+
 
 /*  
   Ejercicio 3: 
@@ -44,14 +55,23 @@ function findKeysInCommon(objeto1, objeto2) {
 // Llamamos a las funciones y mostramos los resultados
 
 function main() {
+   
   const punto = {
     a: 1,
     b: 2,
     c: 3,
-  };
+  }
+  console.log('EJERCICIO 1');
+
  extractValues(punto);
 
- // console.log(arrayToLengthCounters(['gato', 'perro', 'elefante']));
+ console.log('EJERCICIO 2');
+ 
+ const arraystring=['gato', 'perro', 'elefante'];
+
+ const objetoss=arrayToLengthCounters(arraystring);
+ console.log(objetoss);
+
  // console.log(findKeysInCommon({a: 1, b: 2, c: 3}, {b: 4, c: 5, d: 6}));
 }
 
