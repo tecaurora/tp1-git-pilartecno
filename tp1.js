@@ -49,6 +49,16 @@ function arrayToLengthCounters(array) {
 */
 
 function findKeysInCommon(objeto1, objeto2) {
+  var arraydeobj= [];
+
+  for (var propiedad in objeto1) {
+    if (objeto2.hasOwnProperty(propiedad)) {
+      arraydeobj.push(propiedad);
+    }
+  }
+
+  return arraydeobj;
+
   // Tu código aquí
 }
 
@@ -61,6 +71,18 @@ function main() {
     b: 2,
     c: 3,
   }
+  const objetod1 = {
+    a: 1,
+    b: 2,
+    c: 3
+  }
+
+  const objetod2 = {
+    b: 4,
+    c: 5,
+    d: 6
+  }
+
   console.log('EJERCICIO 1');
 
  extractValues(punto);
@@ -72,7 +94,13 @@ function main() {
  const objetoss=arrayToLengthCounters(arraystring);
  console.log(objetoss);
 
- // console.log(findKeysInCommon({a: 1, b: 2, c: 3}, {b: 4, c: 5, d: 6}));
+ console.log('EJERCICIO 3');
+ 
+ 
+ const arraydeobj=findKeysInCommon(objetod1,objetod2 );
+
+ console.log(arraydeobj);
+
 }
 
 main();
